@@ -1,85 +1,70 @@
-# Github Finder App
+# Getting Started with Create React App
 
-App to search Github users and display their info. This is part of my React Front To Back 2022 course and is the most up to date version of this project.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-### Bug Fixes, corrections and code FAQ
+In the project directory, you can run:
 
-The repository code here on the main branch has been updated due to bugs and issues found by students since the course was released.
-If you are looking for exact code from the course then please check out the [originalcoursecode branch](https://github.com/bradtraversy/github-finder-app/tree/originalcoursecode) of this repository.
+### `npm start`
 
-The updates here aim to be a reference and resource for common questions asked
-by students in the Udemy Q&A and for those wishing to make corrections to the
-project.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-#### Q: How do I remove the user stats scroll bars that show on mobile devices
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Code changes for this fix can be seen in [User.jsx](src/pages/User.jsx)
+### `npm test`
 
-#### BUG: I can't see the alert text
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Most likely you have the default light theme provided by DaisyUI. The theme is
-set based on a `prefers-colorscheme` media query, so you may have a light theme
-if you have a light browser theme or OS theme. In which case you won't see the
-text in the alert show.
-Code changes to fix this can be seen in [Alert.jsx](src/components/layout/Alert.jsx)
-The changes here use a [ DaisyUI Alert component ](https://daisyui.com/components/alert/) so will adapt with a change in theme.
-We also now conditionally set the element visibility to **'visible'** or
-**'hidden'** rather than conditionally render, which prevents content shift when
-the alert shows for a smoother UX.
+### `npm run build`
 
-#### Q: Why doesn't Craco work?
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-You don't need to use craco if you are using react-scripts version 5 or greater.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-When Brad recorded the course react-scripts was at version 4 and didn't support postcss, now react-scripts is at version 5 and does support postcss.
-So just check what version of react-scripts you have...
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-    npm list react-scripts
+### `npm run eject`
 
-If it's at version 5 or greater then follow the [ Tailwind version 3 ](https://tailwindcss.com/docs/guides/create-react-app) docs to setup.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If react-scripts is at version 4 then follow the [ Tailwind version 2 ](https://v2.tailwindcss.com/docs/guides/create-react-app) docs to setup, which is what you see Brad doing in the course.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-#### BUG: Linking to users websites
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Some users from Github have already prefixed their websites with `http://` or
-`https://` so we need to check in [User.jsx](src/pages/User.jsx) if their
-website url starts with `http` before constructing the external link.
-Code changes can be see in [User.jsx](src/pages/User.jsx#L48)
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-#### BUG: Light theme RepoItem background is too dark
+## Learn More
 
-The theme is set based on a `prefers-colorscheme` media query, so you may have a light theme
-if you have a light browser theme or OS theme.
-When the browser's preferred color scheme is light, the gray background is too dark on the RepoItem component, and the content is not visible.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Using `base-200` and `base-300` backgrounds, will make the component's background change according to the browser's preference.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-> Code changes can be seen in
-> [RepoItem.jsx](src/components/repos/RepoItem.jsx#L17)
+### Code Splitting
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## Usage
+### Analyzing the Bundle Size
 
-Rename **_.env.example_** to **_.env_**
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-You can use the Github API without a personal token, but if you want to use your token, add it to the .env file
+### Making a Progressive Web App
 
-Learn how to create a token [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Install Dependencies
+### Advanced Configuration
 
-```
-npm install
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Run
+### Deployment
 
-```
-npm start
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-Tailwind UI created by [Hassib Moddasser](https://twitter.com/hassibmoddasser)
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

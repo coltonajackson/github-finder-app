@@ -1,5 +1,7 @@
-import PropTypes from 'prop-types'
-import RepoItem from './RepoItem'
+// Import React Modules
+import PropTypes from 'prop-types';
+// Import Components
+import RepoItem from './RepoItem';
 
 function RepoList({ repos }) {
   return (
@@ -20,4 +22,4 @@ RepoList.propTypes = {
   repos: PropTypes.array.isRequired,
 }
 
-export default RepoList
+export default RepoList;

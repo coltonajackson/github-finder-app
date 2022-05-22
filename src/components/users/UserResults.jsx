@@ -1,10 +1,15 @@
-import { useContext } from 'react'
-import Spinner from '../layout/Spinner'
-import UserItem from '../users/UserItem'
-import GithubContext from '../../context/github/GithubContext'
+// Import React Modules
+import { useContext } from 'react';
+// Import User Components
+import UserItem from './UserItem';
+// Import Asset Components
+import Spinner from '../layout/Spinner';
+// Import Contexts
+import GithubContext from '../../context/github/GithubContext';
+
 
 function UserResults() {
-  const { users, loading } = useContext(GithubContext)
+  const { users, loading } = useContext(GithubContext);
 
   if (!loading) {
     return (
@@ -19,4 +24,4 @@ function UserResults() {
   }
 }
 
-export default UserResults
+export default UserResults;

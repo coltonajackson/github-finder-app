@@ -1,5 +1,6 @@
-import UserResults from '../components/users/UserResults'
-import UserSearch from '../components/users/UserSearch'
+// Import User Components
+import UserResults from "../components/users/UserResults";
+import UserSearch from "../components/users/UserSearch";
 
 function Home() {
   return (
@@ -10,4 +11,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;
